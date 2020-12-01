@@ -1,0 +1,7 @@
+fileignoreconfig:
+- filename: src/board/board.test.js
+  checksum: 48351e6f4f9ef4236c043f9588b644a1e8daeb4d16f808eaa3c06cdb0fea5c62
+- filename: yarn-error.log
+  checksum: aaa9489b047e5fab612654e0d167d436d36167ff2142b908de60d8e78a5d081e
+- filename: yarn.lock
+  checksum: 2355c058a11adb63e5b4790e6849ba1f55dae58010e16867bbe0dcc9ce60d2d3
