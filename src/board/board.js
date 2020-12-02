@@ -1,7 +1,4 @@
 class Board {
-    constructor() {
-
-    }
     createBoard() {
         return {
             1: "['_','_','_']",
