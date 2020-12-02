@@ -1,5 +1,5 @@
 const chalk = require('chalk')
-const Board = require('./board')
+const Board = require('../board/board')
 
 class Game {
     constructor() {
@@ -8,10 +8,7 @@ class Game {
     }
     renderBoard() {
         const board = this.gameboard.createBoard()
-        for(let key in board) {
-
-            // console.log(chalk.blue(board[key]))
-        }console.log(chalk.blue(JSON.stringify(board)))
+        console.log(chalk.redBright.bold(`${board[0]}\n${board[1]}\n${board[2]}\n`))
     }
 }
 module.exports = Game

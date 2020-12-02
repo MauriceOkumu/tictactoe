@@ -1,11 +1,10 @@
 class Board {
-    createBoard() {
-        return {
-            1: "['_','_','_']",
-            2: "['_','_','_']",
-            3: "['_','_','_']"
-        }
+    constructor () {
+        this.board = [['_','_','_'],
+                      ['_','_','_'],
+                      ['_','_','_']]
     }
+    createBoard  = () => this.board 
 }
 
 module.exports = Board
