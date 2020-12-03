@@ -6,14 +6,14 @@ class Play {
         this.game = null
         // this.playGame()
     }
-    async playGame() {
+    playGame() {
         const rl = readline.createInterface({
             input: process.stdin,
             output: process.stdout
           })
           rl.question('Are you ready to play tic-tac-toe? ', (answer) => {
             // TODO: Log the answer in a database
-            console.log(chalk.greenBright(`Thank you for your valuable feedback: ${answer}`))
+            console.log(chalk.greenBright(`Get ready to rumble: ${answer}`))
           
             rl.close()
     })
