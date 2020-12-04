@@ -8,7 +8,10 @@ class Game {
     }
     renderBoard() {
         const board = this.gameboard.createBoard()
-        console.log(chalk.redBright.bold(`${board[0]}\n${board[1]}\n${board[2]}\n`))
+        board.forEach((boar) => {
+            console.log('          ',chalk.redBright.bold(boar.join(' ')))
+        })
+        console.log('\n')
     }
 }
 module.exports = Game
