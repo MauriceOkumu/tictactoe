@@ -6,16 +6,22 @@ class Play {
         this.game = null
     }
     playGame() {
-        const rl = readline.createInterface({
-            input: process.stdin,
-            output: process.stdout
-          })
-          rl.question('Are you ready to play tic-tac-toe? ', (answer) => {
-            console.log(chalk.greenBright(`\n             BOARD \n`))
-          answer === 'yes'? this.game = new Game() :''
-            rl.close()
+    
+    this.getUserInput(() => {
+      this.game = new Game()
     })
  }
+    getUserInput = (fn) => {
+    const { stdin, stdout } = process;
+    const rl = readline.createInterface({ input: stdin, output: stdout });
+    rl.question("Are you ready to play TIC_TAC_TOE? Y/N  ", (answer) => {
+      if (answer.toLowerCase() === "y") {
+        console.log(chalk.greenBright(`\n             BOARD \n`))
+        fn();
+      }
+      rl.close();
+    })
+  }
 }
 
 module.exports = Play
