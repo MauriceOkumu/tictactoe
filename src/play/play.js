@@ -4,6 +4,7 @@ const Game = require('../game/game')
 class Play {
     constructor(){
         this.game = null
+        
     }
     playGame() {
     
@@ -23,5 +24,7 @@ class Play {
     })
   }
 }
+//Daniel ->Ask about a tool which would suggest optimization after {manual or auto}
+//assessment using our tool.
 
 module.exports = Play

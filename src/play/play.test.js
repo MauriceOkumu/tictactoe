@@ -17,7 +17,6 @@ describe('Play', () => {
     })
     test("should execute a cb when user prompt in cli y", () => {
         const mock = jest.fn();
-        const game = new Play()
         game.getUserInput (mock) 
         expect(mock).toHaveBeenCalledTimes(1)
         expect(mock).toHaveBeenCalled();
