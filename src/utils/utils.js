@@ -6,6 +6,19 @@ const Utils = {
 //   startGame: () => {},
 //   playAgainstComp: () => {},
 //   playAgainstPlayer: () => {},
+majorDiagonalWin: () => {},
+minorDiagonalWin: () => {},
+horizontalWin: (board) => {
+  let res = board.filter(element => {
+    return element.every((el) => {
+       return el === '-X-' || el === '-O-'
+    })
+  })
+  return res.length >= 1
+},
+verticalWin: () => {}
+
+
 }
 const positions = {
     1: [0, 0],

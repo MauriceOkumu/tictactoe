@@ -14,8 +14,6 @@ describe('Utils', () => {
     beforeEach(() => {
         jest.resetAllMocks()
         board = new mockedBoard().board
-        Utils.pushToBoard(board, 'X', 0, 0)
-        console.log(board)
     })
     afterEach(() => {
         jest.restoreAllMocks()
@@ -28,5 +26,13 @@ describe('Utils', () => {
       expect(Utils.pushToBoard()).toEqual(42)
       expect(Utils.pushToBoard).toHaveBeenCalledTimes(1)
 
+  })
+  test('Player wins if a pieces in a horizontal line are all the same', () => {
+      Utils.pushToBoard(board, 'O', 0, 0)
+    Utils.pushToBoard(board, 'O', 0, 1)
+    expect(Utils.horizontalWin(board)).toEqual(false)
+    Utils.pushToBoard(board, 'O', 0, 2)
+    console.log(board)
+    expect(Utils.horizontalWin(board)).toEqual(true)
   }) 
 })
